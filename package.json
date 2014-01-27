@@ -1,49 +1,71 @@
 {
-    "name": "esprima",
-    "description": "ECMAScript parsing infrastructure for multipurpose analysis",
-    "homepage": "http://esprima.org",
-    "main": "esprima.js",
-    "bin": {
-        "esparse": "./bin/esparse.js",
-        "esvalidate": "./bin/esvalidate.js"
-    },
-    "version": "1.1.0-dev-harmony",
-    "engines": {
-        "node": ">=0.4.0"
-    },
-    "maintainers": [{
-        "name": "Ariya Hidayat",
-        "email": "ariya.hidayat@gmail.com",
-        "web": "http://ariya.ofilabs.com"
-    }],
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/ariya/esprima.git"
-    },
-    "licenses": [{
-        "type": "BSD",
-        "url": "http://github.com/ariya/esprima/raw/master/LICENSE.BSD"
-    }],
-    "devDependencies": {
-        "jslint": "~0.1.9",
-        "eslint": "~0.1.0",
-        "istanbul": "~0.1.27",
-        "complexity-report": "~0.6.1",
-        "regenerate": "~0.5.4",
-        "unicode-6.3.0": "~0.1.0",
-        "json-diff": "~0.3.1"
-    },
-    "scripts": {
-        "test": "npm run-script lint && node test/run.js && npm run-script coverage && npm run-script complexity",
-        "lint": "node tools/check-version.js && node_modules/eslint/bin/eslint.js esprima.js && node_modules/jslint/bin/jslint.js esprima.js",
-        "coverage": "npm run-script analyze-coverage && npm run-script check-coverage",
-        "analyze-coverage": "node node_modules/istanbul/lib/cli.js cover test/runner.js",
-        "check-coverage": "node node_modules/istanbul/lib/cli.js check-coverage --statement -8 --branch -28 --function 99.69",
-        "complexity": "npm run-script analyze-complexity && npm run-script check-complexity",
-        "analyze-complexity": "node tools/list-complexity.js",
-        "check-complexity": "node node_modules/complexity-report/src/cli.js --maxcc 31 --silent -l -w esprima.js",
-
-        "benchmark": "node test/benchmarks.js",
-        "benchmark-quick": "node test/benchmarks.js quick"
+  "name": "esprima-harmony",
+  "description": "ECMAScript parsing infrastructure for multipurpose analysis",
+  "homepage": "http://esprima.org",
+  "main": "esprima.js",
+  "bin": {
+    "esparse": "./bin/esparse.js",
+    "esvalidate": "./bin/esvalidate.js"
+  },
+  "version": "1.1.0-dev-harmony",
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "maintainers": [
+    "Ariya Hidayat <ariya.hidayat@gmail.com> (http://ariya.ofilabs.com)",
+    "George Duan <georgeiscoming@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cctuan/esprima.git"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/ariya/esprima/raw/master/LICENSE.BSD"
     }
+  ],
+  "devDependencies": {
+    "jslint": "~0.1.9",
+    "eslint": "~0.1.0",
+    "istanbul": "~0.1.27",
+    "complexity-report": "~0.6.1",
+    "regenerate": "~0.5.4",
+    "unicode-6.3.0": "~0.1.0",
+    "json-diff": "~0.3.1"
+  },
+  "scripts": {
+    "test": "npm run-script lint && node test/run.js && npm run-script coverage && npm run-script complexity",
+    "lint": "node tools/check-version.js && node_modules/eslint/bin/eslint.js esprima.js && node_modules/jslint/bin/jslint.js esprima.js",
+    "coverage": "npm run-script analyze-coverage && npm run-script check-coverage",
+    "analyze-coverage": "node node_modules/istanbul/lib/cli.js cover test/runner.js",
+    "check-coverage": "node node_modules/istanbul/lib/cli.js check-coverage --statement -8 --branch -28 --function 99.69",
+    "complexity": "npm run-script analyze-complexity && npm run-script check-complexity",
+    "analyze-complexity": "node tools/list-complexity.js",
+    "check-complexity": "node node_modules/complexity-report/src/cli.js --maxcc 31 --silent -l -w esprima.js",
+    "benchmark": "node test/benchmarks.js",
+    "benchmark-quick": "node test/benchmarks.js quick"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "73a6c1683c16f2824b8a866394e1112bf227192c",
+  "bugs": {
+    "url": "https://github.com/cctuan/esprima/issues"
+  },
+  "directories": {
+    "doc": "doc",
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {
+    "complexity-report": "~0.6.2",
+    "eslint": "~0.1.4",
+    "istanbul": "~0.1.46",
+    "jslint": "~0.1.11",
+    "json-diff": "~0.3.1",
+    "optimist": "~0.6.0",
+    "regenerate": "~0.5.4",
+    "unicode-6.3.0": "~0.1.2"
+  },
+  "author": "",
+  "license": "BSD"
 }
